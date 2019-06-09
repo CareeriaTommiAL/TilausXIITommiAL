@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TilausXIITommiAL.Models;
 
 namespace TilausXIITommiAL.Controllers
 {
@@ -11,7 +12,10 @@ namespace TilausXIITommiAL.Controllers
         // GET: Tuotteet
         public ActionResult Index()
         {
-            return View();
+            TilausDBEntities db = new TilausDBEntities();
+            List<Tuotteet> model = db.Tuotteet.ToList();
+            db.Dispose();
+            return View(model);
         }
     }
 }

@@ -1,0 +1,15 @@
+﻿@model IEnumerable<TilausXIITommiAL.Models.Tuotteet>
+@{
+    ViewBag.Title = "Index";
+}
+
+    <h2>Tuotteet</h2>
+    <br />
+
+@foreach (TilausXIITommiAL.Models.Tuotteet tuo in Model)
+{
+     <p>@tuo.Nimi</p>
+}
+
+
+

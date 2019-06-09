@@ -262,10 +262,10 @@
     <Content Include="Models\TilausDBModel.edmx.diagram">
       <DependentUpon>TilausDBModel.edmx</DependentUpon>
     </Content>
+    <Content Include="Views\Tuotteet\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Tuotteet\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
