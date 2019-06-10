@@ -2,14 +2,29 @@
 @{
     ViewBag.Title = "Index";
 }
-
     <h2>Tuotteet</h2>
     <br />
 
-@foreach (TilausXIITommiAL.Models.Tuotteet tuo in Model)
-{
-     <p>@tuo.Nimi</p>
-}
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>TuoteID</th>
+            <th>Nimi</th>
+            <th>Ahinta</th>
+            <th>Kuva</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (TilausXIITommiAL.Models.Tuotteet tuo in Model)
+        {
+        <tr>
+            <td>@tuo.TuoteID</td>
+            <td>@tuo.Nimi</td>
+            <td>@tuo.Ahinta</td>
+            <td>@tuo.Kuva</td>
+        </tr>
+        }
 
 
-
+    </tbody>
+</table>
